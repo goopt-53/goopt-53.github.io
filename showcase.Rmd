@@ -1,18 +1,79 @@
 ---
 title: "GV300 Showcase"
-description: ""
+description: "A showcase of my GV300 analysis"
 output: distill::distill_article
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(ggplot2)
 ```
 
 ## Introduction
 
-## My coding
-```{r}
+This page showcases my analysis of UK constituency-level election data from the 2024 General Election.
+
+## My Coding
+```{r data, eval=TRUE}
+uk_csv <- "https://electionresults.parliament.uk/general-elections/6/candidacies.csv"
+uk_raw <- readr::read_csv(uk_csv, show_col_types = FALSE)
+names(uk_raw) <- names(uk_raw) %>% tolower() %>% str_replace_all("\\s+", "_")
+
+uk1 <- uk_raw %>% filter(!`election_is_by-election`)
+
+uk2 <- uk1 %>%
+  select(constituency = constituency_name, country = country_name,
+         valid_votes = candidate_vote_count, electorate = electorate)
+
+uk3 <- uk2 %>%
+  group_by(country, constituency) %>%
+  summarise(valid_votes = sum(valid_votes, na.rm = TRUE),
+            electorate = max(electorate, na.rm = TRUE), .groups = "drop")
+
+uk <- uk3 %>%
+  mutate(turnout_registered = 100 * valid_votes / electorate) %>%
+  filter(is.finite(turnout_registered), electorate > 0)
+```
+```{r small, eval=TRUE}
+smallest <- uk %>% 
+  arrange(valid_votes) %>% 
+  slice_head(n = 5) %>%
+  select(constituency, country, valid_votes, turnout_registered)
+smallest
+```
+```{r largest, eval=TRUE}
+largest <- uk %>% 
+  arrange(desc(valid_votes)) %>%  
+  slice_head(n = 5) %>%
+  select(constituency, country, valid_votes, turnout_registered)
+largest
+```
+```{r ratio, eval=TRUE}
+biggest_value <- max(uk$valid_votes)
+smallest_value <- min(uk$valid_votes)
+ratio <- biggest_value / smallest_value
+ratio
 ```
 
-## Data Visualisation
-```{r}
+## Data Visualisations
+```{r plot1, eval=TRUE}
+overall_mean <- mean(uk$valid_votes)
+ggplot(uk, aes(x = valid_votes)) +
+  geom_histogram(bins = 30, fill = "steelblue", alpha = 0.7) +
+  geom_vline(xintercept = overall_mean, color = "red", linetype = "dashed", linewidth = 1) +
+  facet_wrap(~ country, ncol = 2) +
+  labs(title = "Distribution of Constituency Sizes by Country",
+       subtitle = "Red line shows overall UK mean",
+       x = "Number of Valid Votes", y = "Count of Constituencies") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold", size = 14),
+        strip.text = element_text(face = "bold"))
+```
+```{r plot3, eval=TRUE}
+ggplot(uk, aes(x = country, y = valid_votes, fill = country)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(title = "Distribution of Constituency Sizes by Country",
+       x = "Country", y = "Number of Valid Votes") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal()
 ```

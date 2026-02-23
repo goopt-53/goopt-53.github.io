@@ -1,14 +1,14 @@
 ---
 title: "Alex Hoxley"
+image: "images.png"
 links:
   - label: GitHub
     url: "https://github.com/goopt-53"
   - label: GV300 Showcase
     url: "showcase.html"
   - label: Email
-    url: "mailto:youremail@example.com"
-output:
-  postcards::trestles
+    url: "ah22159@essex.ac.uk"
+output: postcards::trestles
 ---
 
 I am a student at the University of Essex studying GV300.
