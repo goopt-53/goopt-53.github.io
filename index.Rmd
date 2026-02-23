@@ -1,0 +1,16 @@
+---
+title: "Alex Hoxley"
+links:
+  - label: GitHub
+    url: "https://github.com/goopt-53"
+  - label: GV300 Showcase
+    url: "showcase.html"
+  - label: Email
+    url: "mailto:youremail@example.com"
+output:
+  postcards::trestles
+---
+
+I am a student at the University of Essex studying GV300.
+This site showcases my work including data analysis and visualizations in R.
+

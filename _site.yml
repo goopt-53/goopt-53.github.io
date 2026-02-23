@@ -1,0 +1,13 @@
+---
+name: "goopt-53.github.io"
+title: "Alex Hoxley"
+output_dir: "docs"
+exclude: ["index.Rmd"]
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "GV300 Showcase"
+      href: showcase.html
+output: distill::distill_article
+---
