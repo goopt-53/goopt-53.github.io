@@ -1,6 +1,6 @@
 ---
 title: "Alex Hoxley"
-image: "images.png"
+image: "frank.jpg"
 links:
   - label: GitHub
     url: "https://github.com/goopt-53"
@@ -12,5 +12,14 @@ output: postcards::trestles
 ---
 
 I am a student at the University of Essex studying GV300.
-This site showcases my work including data analysis and visualizations in R.
+This site showcases my some of my work including data analysis and visualizations in R. this is a test site, and will help me show the capacities of Github and pairing it with previous visualizations
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec felis lacus. Pellentesque vel erat varius, consequat justo eget, posuere erat. Mauris non quam ac risus blandit mollis vitae at tortor. Praesent nec vulputate dolor, vitae ultricies nulla. Vestibulum lacus felis, condimentum eget tortor a, tempor vehicula ipsum. Vestibulum accumsan nibh sed tellus egestas vulputate. Quisque elementum tristique lacus, et suscipit metus faucibus at. Phasellus feugiat, justo vitae ultrices dapibus, ex nisl posuere risus, in efficitur elit turpis vulputate lorem.
+
+Duis vel risus a metus tincidunt malesuada. Cras ut rutrum odio, ac aliquam elit. Pellentesque ut hendrerit dui. Quisque elementum purus nec odio efficitur porta. Sed convallis nec odio non gravida. Donec elit magna, feugiat eget nisi et, dapibus semper diam. Suspendisse magna tellus, eleifend at enim eu, dapibus vehicula leo. Mauris malesuada nisi sodales urna finibus consectetur. Integer ornare pretium enim ac consectetur. Morbi scelerisque arcu eu lacus placerat, eu semper augue gravida. Etiam lobortis rutrum iaculis. Vivamus aliquet lacus vitae ipsum sodales, in molestie justo maximus.
+
+Pellentesque hendrerit odio non erat rhoncus ornare. Nullam ac nunc nibh. Aliquam volutpat lacus ac euismod porttitor. Cras id rutrum neque. Integer quis urna sapien. In sit amet interdum nibh, et mattis enim. Mauris pellentesque vestibulum feugiat. Pellentesque quam nunc, tristique sit amet varius non, commodo at mauris. Donec in arcu a magna blandit fermentum. Vivamus fringilla rutrum est sit amet iaculis. Phasellus varius quam purus. Fusce tristique accumsan aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vehicula commodo nunc. Nullam diam elit, aliquet ac pulvinar ac, mattis in enim. Nunc ut congue purus, in malesuada tellus.
+
+Vestibulum tempor suscipit dolor vel sodales. Sed scelerisque justo sit amet scelerisque rhoncus. Vestibulum pretium ut lectus a vulputate. In efficitur et nibh et accumsan. Aliquam ornare efficitur laoreet. Curabitur sollicitudin, justo id lacinia porttitor, ipsum magna interdum nibh, ac maximus sem eros eu tortor. Nullam congue nibh ac euismod sodales. Duis a ipsum viverra, dignissim dolor quis, mattis nibh. Vestibulum bibendum turpis purus, sit amet fringilla velit imperdiet eget. In tincidunt nibh est, in laoreet libero mattis vitae.
+
+Sed blandit auctor quam id feugiat. Proin posuere erat quis facilisis aliquam. Nullam nec eleifend risus. Ut rutrum sem vel ipsum dapibus efficitur. Aliquam accumsan et augue ut ullamcorper. Sed eget nisl non sem suscipit elementum. Morbi in ipsum ac dui aliquam vulputate. Donec pellentesque sem quis lectus commodo, ullamcorper hendrerit nisl pulvinar. Aenean rhoncus lorem gravida dui pretium, ac hendrerit mi rhoncus. Morbi eu suscipit lorem. Pellentesque volutpat commodo urna, et suscipit ex auctor vel. Curabitur faucibus rutrum magna, nec porttitor ipsum tempor sed. Phasellus scelerisque mauris sit amet fermentum aliquet. Curabitur eget ornare turpis. Nullam a cursus orci, id tempus augue.
